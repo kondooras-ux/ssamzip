@@ -1,0 +1,13 @@
+{
+ "version": "3.3",
+ "date": "2026-11-12",
+ "python": "3.14.7",
+ "deps": {
+  "pyzipper": "0.4.0",
+  "py7zr": "1.1.4",
+  "zopfli": "0.4.3",
+  "tkinterdnd2": "0.7.0",
+  "sv-ttk": "2.6.1",
+  "pyinstaller": "6.22.3"
+ }
+}

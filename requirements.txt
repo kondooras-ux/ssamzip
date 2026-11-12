@@ -1,0 +1,5 @@
+pyzipper>=0.3.6
+py7zr>=1.0
+tkinterdnd2>=0.3
+sv-ttk>=2.6
+zopfli>=0.2.3
