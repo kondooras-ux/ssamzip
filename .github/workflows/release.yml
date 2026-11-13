@@ -12,6 +12,7 @@ permissions:
   contents: write
 env:
   PYTHONUTF8: "1"
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -74,7 +75,7 @@ jobs:
           git add requirements.lock CHANGELOG.md ssamzip.py
           git commit -m "chore: 라이브러리 자동 갱신 ${{ steps.bump.outputs.version }}" || echo "변경 없음"
           git push
-          - name: GitHub Release 만들기
+      - name: GitHub Release 만들기
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
