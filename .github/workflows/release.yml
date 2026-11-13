@@ -74,11 +74,11 @@ jobs:
           git add requirements.lock CHANGELOG.md ssamzip.py
           git commit -m "chore: 라이브러리 자동 갱신 ${{ steps.bump.outputs.version }}" || echo "변경 없음"
           git push
-      - name: GitHub Release 만들기
+          - name: GitHub Release 만들기
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           VER="${{ steps.bump.outputs.version }}"
-          gh release create "v$VER" release/ssamzip-$VER.zip release/SHA256SUMS.txt release/latest.json \
-            --title "쌤ZIP $VER" --notes-file <(python -c "import build; print(build.changelog_notes('$VER'))")
+          python -c "import build; print(build.changelog_notes('$VER'))" > notes.txt
+          gh release create "v$VER" release/ssamzip-$VER.zip release/SHA256SUMS.txt release/latest.json --title "쌤ZIP $VER" --notes-file notes.txt
