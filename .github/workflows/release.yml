@@ -10,7 +10,7 @@ on:
         default: false
 permissions:
   contents: write
-  env:
+env:
   PYTHONUTF8: "1"
 jobs:
   check:
