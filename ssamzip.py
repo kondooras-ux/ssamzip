@@ -26,7 +26,7 @@ import traceback
 import updater
 
 APP_NAME = "쌤ZIP"
-VERSION = "3.3"
+VERSION = "3.3.1"
 PORT = int(os.environ.get("SSAMZIP_PORT", "48721"))
 import moreformats as mf
 ARCHIVE_EXTS = mf.ARCHIVE_EXTS
