@@ -10,7 +10,8 @@ on:
         default: false
 permissions:
   contents: write
-
+  env:
+  PYTHONUTF8: "1"
 jobs:
   check:
     runs-on: ubuntu-latest
